@@ -22,7 +22,7 @@ RUN \
     chmod 755 docker-entrypoint.sh \
     && mv docker-entrypoint.sh /usr/local/bin \
 
-    && yum install -y dnsmasq \
+    && yum install -y dnsmasq make telnet \
 
     && yum clean all \
 
@@ -42,6 +42,8 @@ RUN \
 
     && cd / \
     && rm -rf /tmp/* \
+    && yum remove -y make \
+    && yum autoremove -y \ 
 
     && echo "user=root" > /etc/dnsmasq.conf \
     && echo 'domain-needed' >> /etc/dnsmasq.conf \
