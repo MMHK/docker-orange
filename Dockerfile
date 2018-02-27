@@ -1,4 +1,4 @@
-FROM openresty:centos7
+FROM docker-openresty:centos7
 MAINTAINER Sam, sam@mixmedia.com
 
 # Docker Build Arguments, For further upgrade
