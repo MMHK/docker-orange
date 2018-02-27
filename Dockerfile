@@ -61,7 +61,7 @@ RUN \
     && mkdir -p ${ORANGE_PATH}/logs \
     && chown -R www:www ${ORANGE_PATH}/*
 
-EXPOSE 7777 80 9999
+EXPOSE 7777 8888 8001 9999
 
 # Daemon
 ENTRYPOINT ["docker-entrypoint.sh"]
